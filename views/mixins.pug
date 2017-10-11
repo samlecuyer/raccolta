@@ -1,0 +1,16 @@
+mixin prayer(title, id)
+	.prayer
+		h5= title
+		block
+
+mixin translation(name)
+	table.lined(id=name)
+		tbody
+			block
+
+mixin entry(latin, english)
+	tr
+		td
+			div&attributes(attributes)= latin
+		td
+			div&attributes(attributes)= english

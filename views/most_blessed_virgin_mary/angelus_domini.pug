@@ -1,69 +1,32 @@
 article.exercise
 	h3 ANGELUS DOMINI. —REGINA COELI.
-	.prayer
-		h5 Angelus Domini.
-		table.lined
-			tbody
-				tr
-					td
-						.versicle
-							| Angelus Domini nuntiavit Mariae, et concepit de Spiritu Sancto.
-					td
-						.versicle
-							| The angel of the Lord declared unto Mary, and she conceived of the Holy Ghost.
-				tr
-					td
-						.repetition
-							| Ave Maria, etc.
-					td
-						.repetition
-							| Hail Mary, etc.
-				tr
-					td
-						.versicle
-							| Ecce ancilla Domini: fiat mini secundum verbum tuum.
-					td
-						.versicle
-							| Behold the handmaid of the Lord: be it done unto me according to thy word.
-				tr
-					td
-						.repetition
-							| Ave Maria, etc.
-					td
-						.repetition
-							| Hail Mary, etc.
-				tr
-					td
-						.versicle
-							| Et verbum caro factum est, et habitavit in nobis.
-					td
-						.versicle
-							| And the Word was made flesh, and dwelt among us.
-				tr
-					td
-						.repetition
-							| Ave Maria, etc.
-					td
-						.repetition
-							| Hail Mary, etc.
+	+prayer('Angelus Domini.')
+		+translation()
+			+entry(
+				'Angelus Domini nuntiavit Mariae, et concepit de Spiritu Sancto.',
+				'The angel of the Lord declared unto Mary, and she conceived of the Holy Ghost.'
+			)(class='versicle')
+			+entry('Ave Maria, etc.','Hail Mary, etc.')(class='rubric')
+			+entry(
+				'Ecce ancilla Domini: fiat mini secundum verbum tuum.',
+				'Behold the handmaid of the Lord: be it done unto me according to thy word.'
+			)(class='versicle')
+			+entry('Ave Maria, etc.','Hail Mary, etc.')(class='rubric')
+			+entry(
+				'Et verbum caro factum est, et habitavit in nobis.',
+				'And the Word was made flesh, and dwelt among us.'
+			)(class='versicle')
+			+entry('Ave Maria, etc.','Hail Mary, etc.')(class='rubric')
 		h5.rubric The following may be added.
-		table.lined
-			tbody
-				tr
-					td
-						.versicle
-							| Ora pro nobis, sancta Dei genitrix.
-					td
-						.versicle
-							| Pray for us, holy mother of God.
-				tr
-					td
-						.response
-							| Ut digni efficiamur promissionibus Christi.
-					td
-						.response
-							| That we may be made worthy of the promises of Christ.
-		
+		+translation()
+			+entry(
+				'Ora pro nobis, sancta Dei genitrix.',
+				'Pray for us, holy mother of God.'
+			)(class='versicle')
+			+entry(
+				'Ut digni efficiamur promissionibus Christi.',
+				'That we may be made worthy of the promises of Christ.'
+			)(class='response')
 		table.lined
 			thead
 				tr
