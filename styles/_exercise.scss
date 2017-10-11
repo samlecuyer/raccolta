@@ -1,0 +1,114 @@
+
+h3, h6 {
+	text-transform: uppercase;
+	display: block;
+}
+
+h5 {
+	font-style: italic;
+}
+
+section {
+	counter-reset: exercise-counter;
+}
+
+article {
+	counter-reset: prayer-counter;
+}
+
+.exercise:before {
+	content: counter(exercise-counter, decimal) '.';
+	display: block;
+	text-align: center;
+	counter-increment: exercise-counter;
+}
+
+.exercise, .prayer {
+	margin: 20px 0;
+}
+
+.prayer:before {
+	content: counter(prayer-counter, upper-roman) '.';
+	display: block;
+	text-align: center;
+	counter-increment: prayer-counter;
+}
+
+.litany {
+	counter-reset: litany-counter;
+}
+
+.litany .iteration:before {
+	content: counter(litany-counter, upper-roman) '.';
+	counter-increment: litany-counter;
+}
+
+.chaplet {
+	counter-reset: chaplet-counter;
+
+	.bead:before {
+		content: counter(chaplet-counter, upper-roman) '.';
+		counter-increment: chaplet-counter;
+	}
+
+	.bead {
+		margin: 10px 0;
+	}
+}
+
+.rubric {
+	text-align: center;
+	display: block;
+	color: red;
+
+	em { 
+		text-transform: uppercase;
+	}
+
+	i { 
+		font-style: italic;
+	}
+}
+
+.chaplet .bead:before {
+	content: counter(chaplet-counter, upper-roman) '.';
+	counter-increment: chaplet-counter;
+}
+
+.note {
+	font-size: .75rem;
+	color: #555;
+	margin: 10px 0;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+.lined td {
+    border-left: 1px solid red;
+    border-width: 0 0 0 1px;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible;
+    padding: 0 1em;
+    width: 50%;
+}
+
+.lined td:first-child {
+	border-left-width: 0;
+}
+
+.versicle::before {
+	content: '℣. ';
+	color: red;
+}
+.response::before {
+	content: '℟. ';
+	color: red;
+}
+.repetition {
+	text-align: center;
+	font-style: italic;
+	display: block;
+}
