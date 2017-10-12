@@ -1,6 +1,6 @@
 mixin exercise(title, id)
 	article.exercise
-		h3= title
+		h3.exercise-title= title
 		block
 
 mixin note
@@ -35,6 +35,11 @@ mixin chaplet
 
 mixin beads
 	.beads
+		block
+
+mixin meditations(...entries)
+	each val in entries
+		.meditation= val
 		block
 
 mixin meditation
