@@ -1,0 +1,30 @@
+{
+  "name": "raccolta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-pug": "^3.3.0",
+    "node-sass-middleware": "^0.11.0",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app",
+    "build": "gulp",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samlecuyer/raccolta.git"
+  },
+  "author": "samlecuyer@gmaill.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samlecuyer/raccolta/issues"
+  },
+  "homepage": "https://github.com/samlecuyer/raccolta#readme"
+}

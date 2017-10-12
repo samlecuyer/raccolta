@@ -1,16 +1,46 @@
+mixin exercise(title, id)
+	article.exercise
+		h3= title
+		block
+
+mixin note
+	p.note
+		block
+
 mixin prayer(title, id)
 	.prayer
 		h5= title
 		block
 
-mixin translation(name)
-	table.lined(id=name)
+mixin translation(latin, english)
+	table.lined.translation
+		thead
+			th= latin
+			th= english
 		tbody
 			block
 
 mixin entry(latin, english)
 	tr
-		td
-			div&attributes(attributes)= latin
-		td
-			div&attributes(attributes)= english
+		td.translation
+			div&attributes(attributes)
+				| !{latin}
+		td.translation
+			div&attributes(attributes)
+				| !{english}
+
+mixin chaplet
+	.chaplet
+		block
+
+mixin beads
+	.beads
+		block
+
+mixin meditation
+	.meditation
+		block
+
+mixin bead
+	.bead
+		block
