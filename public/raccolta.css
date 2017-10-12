@@ -61,7 +61,10 @@ article {
   counter-increment: exercise-counter; }
 
 .exercise, .prayer {
-  margin: 20px 0; }
+  margin: 1.5rem 0; }
+
+.exercise-title {
+  margin: 0 0 1rem; }
 
 .prayer:before {
   content: counter(prayer-counter, upper-roman) ".";
@@ -103,13 +106,15 @@ article {
   counter-increment: chaplet-counter; }
 
 .note {
-  font-size: .75rem;
+  font-size: .85rem;
   color: #555;
-  margin: 10px 0; }
+  margin: 10px 0;
+  text-indent: 1em; }
 
 table {
   border-collapse: collapse;
-  width: 100%; }
+  width: 100%;
+  margin: 1rem 0; }
 
 .lined td {
   border-left: 1px solid red;
@@ -119,9 +124,19 @@ table {
   overflow: visible;
   padding: 0 1em;
   width: 50%; }
+  .lined td:first-child {
+    border-left-width: 0;
+    padding-left: 0; }
+  .lined td:last-child {
+    padding-right: 0; }
+  .lined td div {
+    text-indent: 1em;
+    margin: 0.1em 0; }
 
-.lined td:first-child {
-  border-left-width: 0; }
+.oremus {
+  text-align: center;
+  display: block;
+  text-transform: uppercase; }
 
 .versicle::before {
   content: '℣. ';
