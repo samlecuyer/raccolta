@@ -46,12 +46,21 @@ article {
 .chaplet {
 	counter-reset: chaplet-counter;
 
-	.bead:before {
-		content: counter(chaplet-counter, upper-roman) '.';
+	.beads {
+		counter-reset: bead-counter;
+
+		.bead:before {
+			content: counter(bead-counter, decimal) '. ';
+			counter-increment: bead-counter;
+		}
+	}
+
+	.meditation:before {
+		content: counter(chaplet-counter, upper-roman) '. ';
 		counter-increment: chaplet-counter;
 	}
 
-	.bead {
+	.meditation {
 		margin: 10px 0;
 	}
 }
