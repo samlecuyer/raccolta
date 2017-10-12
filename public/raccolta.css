@@ -78,10 +78,15 @@ article {
 
 .chaplet {
   counter-reset: chaplet-counter; }
-  .chaplet .bead:before {
-    content: counter(chaplet-counter, upper-roman) ".";
+  .chaplet .beads {
+    counter-reset: bead-counter; }
+    .chaplet .beads .bead:before {
+      content: counter(bead-counter, decimal) ". ";
+      counter-increment: bead-counter; }
+  .chaplet .meditation:before {
+    content: counter(chaplet-counter, upper-roman) ". ";
     counter-increment: chaplet-counter; }
-  .chaplet .bead {
+  .chaplet .meditation {
     margin: 10px 0; }
 
 .rubric {
